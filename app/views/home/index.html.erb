@@ -400,7 +400,7 @@ function mouseRepel(p, mousex, mousey) {
 
     if (dist <= minDist) {
         ctx.beginPath();
-        ctx.strokeStyle = "rgba(0,0,0,1)";
+        ctx.strokeStyle = "rgba(255,255,255," + (1.2 - dist / minDist) + ")";
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(mousex, mousey);
         ctx.stroke();
